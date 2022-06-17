@@ -1,0 +1,55 @@
+{
+    "compilerOptions": {
+        "target": "esnext", // 指定目标语言的版本  ES5 、ES6、esnext
+        "module": "esnext", // 指定生成哪个模块系统代码 None/CommonJS/AMD
+        "moduleResolution": "node", // 决定如何处理模块 node / Classic (默认值)
+        "strict": true, // 模块输出中是否包含 "use strict" 严格指令。
+        "noLib": false, // 不包含默认的库文件 (lib.d.ts)
+        "forceConsistentCasingInFileNames": true, // 禁止对同一个文件的不一致的引用
+        "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入
+        "strictFunctionTypes": true, // 禁用函数参数双向协变检查
+        "jsx": "Preserve", // 在.tsx文件里支持JSX  React/Preserve
+        "baseUrl": ".", // 解析非相对模块名的基准目录
+        "allowJs": true, // 允许编译javascript文件
+        "sourceMap": true, // 生成单个sourcemaps文件，而不是将每sourcemaps生成不同的文件
+        "esModuleInterop": true, // 
+        "resolveJsonModule": true, //
+        "noUnusedLocals": true, // 若有未使用的局部变量则抛错
+        "noUnusedParameters": true, // 若有未使用的参数则抛错
+        "experimentalDecorators": true, // 启用实验性的ES装饰器
+        "lib": [ // 编译过程中需要引入的库文件的列表 
+            "dom",
+            "esnext"
+        ],
+        "noImplicitAny": false, // 在表达式和声明上有隐含的 any类型时报错
+        "skipLibCheck": true, // 忽略所有的声明文件（ *.d.ts）的类型检查
+        "types": [ // 要包含的类型声明文件名列表
+            "vite/client"
+        ],
+        "removeComments": true, // 删除所有注释，除了以 /!*开头的版权信息
+        "isolatedModules": false, // 将每个文件作为单独的模块
+        "paths": { // 模块名到基于 baseUrl的路径映射的列表
+            "@/*": [
+                "src/*"
+            ],
+            "#/*": [
+                "types/*"
+            ]
+        }
+    },
+    "include": [ // 引入对应的文件 ts 书写。 但可以使用 "exclude" 属性过滤
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+        "build/**/*.ts",
+        "build/**/*.d.ts",
+        "types/**/*.d.ts",
+        "types/**/*.ts",
+        "vite.config.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+}

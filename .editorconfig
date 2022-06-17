@@ -1,0 +1,30 @@
+# 告诉edit插件, 这是根文件
+root = true  
+# 匹配所有文件
+[*]
+# 设置字符集
+charset=utf-8
+# 结尾换行符 
+end_of_line = lf
+# 在文件结尾插入新行 
+insert_final_newline = true
+# 一行最大多少字符
+max_line_length = 200
+# 缩进风格 space/tab
+indent_style = space
+# 缩进的空格数
+indent_size = 4
+
+# 匹配yml/yaml/json文件
+[*.{yml,yaml,json}]
+indent_style = space
+indent_size = 4
+
+# 匹配md文件
+[*.md]
+# 删除一行中的前后空格
+trim_trailing_whitespace = false
+
+# 以下匹配类同
+[Makefile]
+indent_style = tab
